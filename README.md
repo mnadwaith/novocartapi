@@ -1,7 +1,3 @@
-comuid:  admin_01
-pass: 56aqabCTxpDSFGzV
-
-mongodb+srv://admin_01:56aqabCTxpDSFGzV@cluster0.fw41pmb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 API
 

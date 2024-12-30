@@ -1,7 +1,7 @@
 {
-  "name": "mongodb",
+  "name": "novacartapi",
   "version": "1.0.0",
-  "description": "uid:  admin_01\r pass: 56aqabCTxpDSFGzV",
+  "description": "API for e-commerce website",
   "main": "app.js",
   "scripts": {
     "start": "npm app.js",
@@ -11,9 +11,21 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.19.2",
     "mongodb": "^6.8.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnadwaith/novacartapi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mnadwaith/novacartapi/issues"
+  },
+  "homepage": "https://github.com/mnadwaith/novacartapi#readme"
 }

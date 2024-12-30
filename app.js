@@ -3,13 +3,14 @@ let app = express();
 let port = 9110;
 let cors = require('cors');
 
+
 let swaggerUi = require('swagger-ui-express')
 let swaggerDocument = require('./swagger.json')
 let package = require('./package.json')
 
 swaggerDocument.info.version = package.version
 
-app.use('/api-doc',swaggerUi.serve,swaggerUi.setup(swaggerDocument))
+app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 app.use(cors())
 app.use(express.json())
 
@@ -134,10 +135,10 @@ app.get('/beauty_personal_care', async (req, res) => {
     res.send(output);
 });
 
-app.post('/placeOrder',async(req,res)=>{
+app.post('/placeOrder', async (req, res) => {
     let data = req.body;
     let collection = "orders"
-    let response = await postData(collection,data)
+    let response = await postData(collection, data)
     res.send(response)
 })
 
