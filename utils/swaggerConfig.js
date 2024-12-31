@@ -1,16 +1,21 @@
-{
-    "openapi": "3.0.0",
-    "info": {
-        "description": "This is api for NovaCart",
-        "version": "__version__"
+
+const swaggerConfig = {
+    openapi: '3.0.0',
+    info: {
+        title: 'NovaCart API',
+        version: '1.0.0',
+        description: 'API documentation for NovaCart eCommerce system',
     },
-    "tags": [
+    servers: [
         {
-            "name": "PUBLIC ROUTE",
-            "description": "Public Route"
+            url: 'http://localhost:9110',
+            description: 'Local server',
+        }, {
+            url: 'https://novacartapi.onrender.com/',
+            description: 'Live Server'
         }
     ],
-    "paths": {
+    paths: {
         "/": {
             "summary": "Testing Default Route",
             "get": {
@@ -88,4 +93,6 @@
             }
         }
     }
-}
+};
+
+export default swaggerConfig;

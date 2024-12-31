@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "API for e-commerce website",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "npm app.js",
+    "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "author": "",
