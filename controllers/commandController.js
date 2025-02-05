@@ -1,15 +1,15 @@
-import dbService from '../services/dbService.js';
+import { insertData as id, updateData as ud, deleteData as dd } from '../services/dbServices/commands/dbService.js'
 
 async function createData(collection, data) {
-    return await dbService.insertData(collection, data);
+    return await id(collection, data);
 }
 
 async function updateData(collection, query, data) {
-    return await dbService.updateData(collection, query, data);
+    return await ud(collection, query, data);
 }
 
 async function deleteData(collection, query) {
-    return await dbService.deleteData(collection, query);
+    return await dd(collection, query);
 }
 
 export default {

@@ -12,8 +12,8 @@ import sportsOutdoorRoutes from './routes/sportsOutdoorRoutes.js';
 import toysGamesRoutes from './routes/toysGamesRoutes.js';
 import beautyPersonalCareRoutes from './routes/beautyPersonalCareRoutes.js';
 import ordersRoutes from './routes/ordersRoutes.js';
+import { dbConnect } from './utils/dbConnect.js';
 import dotenv from 'dotenv'
-import dbService from './services/dbService.js'
 
 dotenv.config()
 const app = express();
@@ -40,7 +40,7 @@ app.use('*', (req, res) => {
 
 app.listen(process.env.PORT, () => {
     try {
-        dbService.dbConnect()
+        dbConnect()
         console.log(`Server is running on port ${process.env.PORT}`);
     } catch (error) {
         console.log('Error: ' + error.message)
